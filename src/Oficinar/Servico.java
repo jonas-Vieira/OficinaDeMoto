@@ -1,7 +1,5 @@
 package Oficinar;
 
-import java.security.PublicKey;
-
 public class Servico {
     private String descricao;
     private double preco;
@@ -26,11 +24,9 @@ public class Servico {
     public void setPreco(double preco) {
         this.preco = preco;
     }
-    public void adicionarServico(){
 
-    }
     public void servico(){
         System.out.println("Descrição: " + descricao);
-        System.out.printf("Valor: R$ %.2f" + preco);
+        System.out.printf("Valor: R$ %.2f%n", preco);
     }
 }

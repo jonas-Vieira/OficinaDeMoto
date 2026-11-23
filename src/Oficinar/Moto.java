@@ -1,7 +1,5 @@
 package Oficinar;
 
-import java.util.Date;
-
 public class Moto {
     private final int id;
     private String modelo;
