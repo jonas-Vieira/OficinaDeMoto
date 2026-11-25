@@ -7,6 +7,37 @@ public class Program {
 
         ClienteServico clienteServico = new ClienteServico();
         MotoServico motoServico = new MotoServico();
+        CatalogoServicos c = new CatalogoServicos();
+
+        System.out.println("Adicionar serviço: ");
+        System.out.print("Descrição do serviço: ");
+        String descricao = sc.nextLine();
+        System.out.print("Valor: ");
+        double valor = sc.nextDouble();
+        c.addNoCatalogo( new Servico(descricao,valor));
+
+        sc.nextLine();
+        System.out.println("Adicionar serviço: ");
+        System.out.print("Descrição do serviço: ");
+        descricao = sc.nextLine();
+        System.out.print("Valor: ");
+        valor = sc.nextDouble();
+        c.addNoCatalogo(new Servico(descricao,valor));
+        c.listaCatalogo();
+        sc.nextLine();
+        System.out.println("Buscar serviço: ");
+        descricao = sc.nextLine();
+
+        Servico encotrado = c.buscarServico(descricao);
+        if (encotrado != null){
+            encotrado.servico();
+        }else {
+            System.out.println("nao encontrado");
+        }
+        c.removerServico("troca de oleo");
+        c.listaCatalogo();
+        System.out.println("========================");
+
         System.out.print("Cliente: ");
         String nomeCliente = sc.nextLine();
         System.out.print("Telefone: ");
