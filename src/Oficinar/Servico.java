@@ -6,7 +6,7 @@ public class Servico {
 
     public Servico(String descricao, double preco) {
         this.descricao = descricao;
-        this.preco = preco;
+        setPreco(preco);
     }
 
     public String getDescricao() {
@@ -22,7 +22,11 @@ public class Servico {
     }
 
     public void setPreco(double preco) {
-        this.preco = preco;
+        if (preco > 0 ){
+            this.preco = preco;
+        }else {
+            System.out.println("PREÇO INVALIDO!");
+        }
     }
 
     public void servico(){
